@@ -1,0 +1,77 @@
+<!-- Unit 12 Project
+Requirements
+[  ] $() Select by Element, ID AND Class 
+[  ] Use Three Different jQuery Methods 
+[  ] Add Five CSS Declarations
+[  ] Include Three Images
+
+Select ONE Additional 
+[ no ] Feature 1 - Use .addClass() method
+[ no ] Feature 2 - Use a variable in javaScript 
+[ no ] Feature 3 - Use .mouseover() method
+[ no ] Feature 4 - Use .show() method
+[ no ] Feature 5 - Use .append() method
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unit 12 Project</title>
+  <style>
+  body {
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+    }
+  .memory {
+  margin-top: 20px;
+  display: none;
+    }
+    img {
+      
+      width: 200px;
+      border-radius: 10px;
+    }
+    .highlighted {
+      border: 2px solid blue ;
+      
+    }
+  </style>
+  
+  <script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+  <h1> Click here to Reveal a Memory</h1>
+    <button id= "memory1"> Memory1</button>
+    <button id="memory2">Memory 2</button>
+    <button id="memory3">Memory 3</button>
+    <div id="memories" class= "memory"></div>
+    <script>
+    $(document).ready(function() {
+    $("#memory1").click(function() {
+      $("#memories").html("<p>On Mothers day when my family hosted a barbeque</p>");
+      $("#memories").append ("<img src='https://cdn.glitch.global/83563905-5569-4430-8f8a-36af09b41484/thumbnails%2FIMG_0296.JPG?1749895367699'>");
+      $("#memories").css("color", "#2e8b57").show();
+      
+    });
+      $("#memory2").click(function(){
+        $("#memories").html("<p>My Birthday trip to Maryland</p>");
+        $("#memories").append("<img src= 'https://cdn.glitch.global/83563905-5569-4430-8f8a-36af09b41484/thumbnails%2FIMG_0252.JPG?1749896373692'>");
+        $("#memories").css("color", "#8b0000").addClass("highlighted").show();
+        
+      });
+      $("#memory3").click(function() {
+        $("#memories").html("<p> When I went on a Road Trip</p>");
+        $("#memories").append("<img src= 'https://cdn.glitch.global/83563905-5569-4430-8f8a-36af09b41484/thumbnails%2FIMG_0241.JPG?1749897595312'>");
+        $("#memories").css("color", "#00008b").show ();
+        
+      });
+      });
+    </script>
+  </body>
+</html>
+                            
+   
+  
+
+<!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery-->
